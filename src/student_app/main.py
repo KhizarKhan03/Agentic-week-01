@@ -1,3 +1,4 @@
+from student_app.services.calculator import is_passing
 from config import APP_NAME 
 from config import DEBUG 
 from config import MAX_STUDENTS
@@ -54,6 +55,11 @@ def main():
     grade = "D"
  else:
     grade = "F" 
+
+ if is_passing(marks):
+    status = "Pass"
+ else:
+    status = "Fail"
  
  print()
  print("Student Report")
@@ -61,6 +67,6 @@ def main():
  print(f"Name: {name}")
  print(f"Marks: {marks}")
  print(f"Grade: {grade}")
-
+ print(f"Status: {status}")
 
 if __name__ == "__main__": main()
