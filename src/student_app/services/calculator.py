@@ -1,7 +1,6 @@
 def calculate_grade(marks):
- if marks >= 86:
-    return "A+"
- elif marks >= 80:
+
+ if marks >= 80:
     return "A"
  elif marks >= 70:
     return "B"
@@ -11,3 +10,6 @@ def calculate_grade(marks):
     return "D"
  else:
     return "F"
+
+def is_passing(marks):
+    return marks >= 50
